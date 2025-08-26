@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archived Products - Fashion Palette BD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="back-btn" onclick="goBack()">← Back</button>
+            <div class="header-content">
+                <h1>Fashion Palette BD</h1>
+                <p>Archived Products</p>
+            </div>
+        </div>
+        
+        <div class="add-product-section">
+            <input type="text" id="searchInput" placeholder="Search archived products..." class="product-input">
+        </div>
+        
+        <div class="products-list" id="archivedProductsList">
+            <!-- Archived products will be dynamically added here -->
+        </div>
+        
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <div class="empty-state-content">
+                <span class="empty-icon">📦</span>
+                <h3>No Archived Products</h3>
+                <p>Products you archive will appear here</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="archive.js"></script>
+</body>
+</html>
+

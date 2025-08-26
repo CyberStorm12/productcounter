@@ -1,0 +1,336 @@
+.back-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.header-content {
+    text-align: center;
+    flex: 1;
+}
+
+.product-photo-section {
+    padding: 20px 16px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.photo-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.product-photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+}
+
+.photo-placeholder {
+    width: 120px;
+    height: 120px;
+    border: 2px dashed #cbd5e0;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #718096;
+    background: white;
+}
+
+.photo-placeholder span {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.photo-placeholder p {
+    font-size: 12px;
+    text-align: center;
+}
+
+.upload-photo-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.upload-photo-btn:hover {
+    transform: translateY(-1px);
+}
+
+.customer-data-section {
+    padding: 16px;
+}
+
+.add-customer-section {
+    margin-bottom: 20px;
+}
+
+.customer-input {
+    width: 100%;
+    min-height: 80px;
+    padding: 12px 16px;
+    border: 1.5px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-bottom: 12px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background: white;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.customer-input:focus {
+    border-color: #667eea;
+}
+
+.customer-input::placeholder {
+    color: #adb5bd;
+}
+
+.add-customer-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #38a169, #2f855a);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-customer-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(56, 161, 105, 0.3);
+}
+
+.customer-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.customer-entry {
+    background: white;
+    border: 1.5px solid #f1f3f4;
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.customer-entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.entry-number {
+    font-size: 12px;
+    color: #718096;
+    font-weight: 600;
+}
+
+.entry-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.action-btn {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.edit-btn {
+    background: #3182ce;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #2c5aa0;
+}
+
+.delete-btn {
+    background: #e53e3e;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #c53030;
+}
+
+.copy-btn {
+    background: #38a169;
+    color: white;
+}
+
+.copy-btn:hover {
+    background: #2f855a;
+}
+
+.customer-data {
+    font-size: 14px;
+    color: #2d3748;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.edit-mode .customer-data {
+    display: none;
+}
+
+.edit-textarea {
+    width: 100%;
+    min-height: 60px;
+    padding: 8px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    resize: vertical;
+    font-family: inherit;
+    display: none;
+}
+
+.edit-mode .edit-textarea {
+    display: block;
+}
+
+.edit-actions {
+    display: none;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.edit-mode .edit-actions {
+    display: flex;
+}
+
+.save-btn {
+    background: #38a169;
+    color: white;
+    padding: 4px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: #718096;
+    color: white;
+    padding: 4px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 375px) {
+    .product-photo-section {
+        padding: 16px 12px;
+    }
+    
+    .product-photo,
+    .photo-placeholder {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .photo-placeholder span {
+        font-size: 28px;
+    }
+    
+    .customer-data-section {
+        padding: 12px;
+    }
+    
+    .customer-input {
+        min-height: 70px;
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+    
+    .add-customer-btn {
+        padding: 10px;
+        font-size: 15px;
+    }
+    
+    .customer-entry {
+        padding: 12px;
+    }
+    
+    .action-btn {
+        padding: 3px 6px;
+        font-size: 10px;
+    }
+    
+    .customer-data {
+        font-size: 13px;
+    }
+}
+
+/* Scrollbar styling */
+.customer-list {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 transparent;
+}
+
+.customer-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.customer-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.customer-list::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 2px;
+}
+
+.customer-list::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Palette BD - Product Counter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Fashion Palette BD</h1>
+            <p>Product Counter</p>
+        </div>
+        
+        <div class="add-product-section">
+            <button id="viewArchiveBtn" class="view-archive-btn">📦 View Archived Products</button>
+            <input type="text" id="productNameInput" placeholder="Enter product name" class="product-input">
+            <input type="number" id="productPriceInput" placeholder="Enter product price" class="product-input" min="0" step="0.01">
+            <button id="addProductBtn" class="add-btn">Add Product</button>
+        </div>
+        
+        <div class="products-list" id="productsList">
+            <!-- Products will be dynamically added here -->
+        </div>
+        
+        <div class="footer-note">
+            <p>Data is automatically saved and will persist across browser sessions</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
