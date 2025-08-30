@@ -1,0 +1,331 @@
+.business-info-section {
+    padding: 16px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background: white;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    border-color: #667eea;
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background: white;
+    min-height: 80px;
+    resize: vertical;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.form-textarea:focus {
+    border-color: #667eea;
+}
+
+.logo-upload-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.logo-preview {
+    width: 120px;
+    height: 120px;
+    border: 2px dashed #e9ecef;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    overflow: hidden;
+}
+
+.logo-placeholder {
+    text-align: center;
+    color: #718096;
+}
+
+.logo-placeholder span {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.logo-placeholder p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.logo-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.upload-btn, .remove-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: fit-content;
+}
+
+.upload-btn {
+    background: #667eea;
+    color: white;
+}
+
+.upload-btn:hover {
+    background: #5a67d8;
+}
+
+.remove-btn {
+    background: #e53e3e;
+    color: white;
+}
+
+.remove-btn:hover {
+    background: #c53030;
+}
+
+.states-section {
+    border: 1.5px solid #e9ecef;
+    border-radius: 10px;
+    padding: 16px;
+    background: #f8f9fa;
+}
+
+.states-list {
+    margin-bottom: 16px;
+}
+
+.state-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: white;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.state-name {
+    font-size: 14px;
+    color: #2d3748;
+}
+
+.delete-state-btn {
+    background: #e53e3e;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.delete-state-btn:hover {
+    background: #c53030;
+}
+
+.add-state-section {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.add-state-section .form-input {
+    flex: 1;
+    margin: 0;
+}
+
+.add-state-btn {
+    background: #38a169;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.add-state-btn:hover {
+    background: #2f855a;
+}
+
+.form-actions {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.save-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.save-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+}
+
+.save-btn:active {
+    transform: translateY(0);
+}
+
+.top-buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.half-width {
+    flex: 1;
+}
+
+.business-info-btn {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.business-info-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
+}
+
+.business-info-btn:active {
+    transform: translateY(0);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 375px) {
+    .business-info-section {
+        padding: 12px;
+    }
+    
+    .form-group {
+        margin-bottom: 16px;
+    }
+    
+    .logo-preview {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .states-section {
+        padding: 12px;
+    }
+    
+    .add-state-section {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .add-state-section .form-input {
+        width: 100%;
+    }
+    
+    .add-state-btn {
+        width: 100%;
+    }
+}
+
+
+
+.color-input {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.state-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: white;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    border: 1px solid #e2e8f0;
+    gap: 8px;
+}
+
+.state-color-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+    flex-shrink: 0;
+}
+
+.state-color-picker {
+    width: 30px;
+    height: 30px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+}
+
+.state-item .state-name {
+    flex-grow: 1;
+}
+
+.add-state-section {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+

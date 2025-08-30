@@ -1,0 +1,562 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    background: white;
+    min-height: 100vh;
+}
+
+.header {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+    padding: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.header-content {
+    text-align: center;
+    flex: 1;
+}
+
+.header-content h1 {
+    font-size: 16px;
+    flex-grow: 1;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.header-content p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.main-content {
+    padding: 20px;
+    background: #f8f9fa;
+}
+
+/* Photo Upload and Amount Section */
+.photo-amount-section {
+    background: white;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.photo-upload-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.photo-container {
+    position: relative;
+    margin-bottom: 6px;
+}
+
+.photo-placeholder {
+    width: 60px;
+    height: 60px;
+    border: 1px dashed #cbd5e0;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.photo-placeholder:hover {
+    border-color: #667eea;
+    background: #edf2f7;
+}
+
+.photo-placeholder span {
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.photo-placeholder p {
+    font-size: 8px;
+    font-weight: 600;
+    color: #718096;
+    margin: 0;
+    text-align: center;
+}
+
+.product-photo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+}
+
+.choose-photo-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.choose-photo-btn:hover {
+    background: #5a67d8;
+}
+
+.amount-section {
+    background: #f8f9fa;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.amount-text {
+    font-size: 10px;
+    color: #718096;
+    font-weight: 500;
+}
+
+.amount-value {
+    font-weight: 700;
+    color: #2d3748;
+    font-size: 10px;
+}
+
+/* Search Section */
+.search-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: nowrap; /* Changed from wrap to nowrap to keep everything on one line */
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 25px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background: white;
+    min-width: 0; /* Allow input to shrink */
+}
+
+.search-input:focus {
+    border-color: #667eea;
+}
+
+.filter-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0; /* Prevent container from shrinking */
+}
+
+.filter-icon {
+    font-size: 18px;
+    color: #718096;
+    cursor: pointer;
+    padding: 8px;
+    height: 42px; /* Match search input height */
+    width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.filter-icon:hover {
+    background-color: #f7fafc;
+}
+
+.state-filter-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1000; /* Increased z-index to ensure it appears above other elements */
+    min-width: 120px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.state-filter-dropdown option {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+/* Hidden class for toggling visibility */
+.hidden {
+    display: none !important;
+}
+
+/* Customer Input Section */
+.customer-input-section {
+    margin-bottom: 20px;
+}
+
+.customer-data-input {
+    width: 100%;
+    min-height: 80px;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 12px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background: white;
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.5;
+}
+
+.customer-data-input:focus {
+    border-color: #667eea;
+}
+
+.customer-data-input::placeholder {
+    color: #adb5bd;
+}
+
+.add-customer-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: #48bb78;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.add-customer-btn:hover {
+    background: #38a169;
+}
+
+/* Customer Entries */
+.customer-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.customer-entry {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease;
+}
+
+.customer-entry:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    border-color: #cbd5e0;
+}
+
+.customer-entry-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f7fafc;
+}
+
+.entry-number {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.entry-actions {
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.entry-actions::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Webkit browsers */
+}
+
+.entry-number-btn {
+    background: #718096;
+    color: white;
+    cursor: default;
+}
+
+.edit-btn {
+    background: #4299e1;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #3182ce;
+}
+
+.copy-btn {
+    background: #38a169;
+    color: white;
+}
+
+.copy-btn:hover {
+    background: #2f855a;
+}
+
+.entry-btn {
+    background: #ed8936;
+    color: white;
+}
+
+.entry-btn:hover {
+    background: #dd6b20;
+}
+
+.print-btn {
+    background: #805ad5;
+    color: white;
+}
+
+.print-btn:hover {
+    background: #6b46c1;
+}
+
+.delete-btn {
+    background: #e53e3e;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #c53030;
+}
+
+.save-btn {
+    background: #48bb78;
+    color: white;
+}
+
+.save-btn:hover {
+    background: #38a169;
+}
+
+.cancel-btn {
+    background: #a0aec0;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: #718096;
+}
+
+.action-btn {
+    padding: 10px 15px;
+    font-size: 28px;
+    height: 100px;
+
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+    flex-grow: 1;
+}
+
+.state-dropdown {
+    background: #667eea;
+    color: white;
+     font-size: 28px;
+    height: 100px;
+    flex-grow: 1;
+    min-width: 0; /* Allow buttons to shrink */
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.state-dropdown:hover {
+    background: #5a67d8;
+}
+
+.state-dropdown option {
+    background: white;
+    color: #2d3748;
+    font-size: 12px;
+    padding: 4px;
+}
+
+/* Customer Data Display */
+.customer-data {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #2d3748;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: 1px solid #e2e8f0;
+}
+
+/* Edit Mode Styles */
+.customer-entry.edit-mode .customer-data {
+    display: none;
+}
+
+.customer-entry.edit-mode .edit-textarea {
+    display: block;
+}
+
+.customer-entry.edit-mode .edit-actions {
+    display: flex;
+}
+
+.edit-textarea {
+    display: none;
+    width: 100%;
+    min-height: 80px;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    line-height: 1.5;
+    resize: vertical;
+    margin-bottom: 12px;
+    background: white;
+}
+
+.edit-actions {
+    display: none;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.edit-actions button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #718096;
+}
+
+.empty-state p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .search-section {
+        gap: 4px; /* Further reduce gap on mobile */
+    }
+    
+    .search-input {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+    
+    .filter-icon {
+        font-size: 16px;
+        height: 36px;
+        width: 36px;
+    }
+    
+    .action-btn {
+        font-size: 6px;
+        height: 16px;
+        min-width: 24px;
+        padding: 1px 3px;
+    }
+    
+    .state-dropdown {
+        font-size: 6px;
+        height: 16px;
+        min-width: 30px;
+    }
+    
+    .entry-actions {
+        gap: 1px; /* Minimal gap on mobile */
+    }
+}
+

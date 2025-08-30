@@ -1,0 +1,342 @@
+
+
+
+/* bulk-states.css - Mobile-Friendly & Responsive Entry Design */
+
+.bulk-states-content {
+    padding: 20px;
+    background: white;
+    color: #2d3748;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.states-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.state-card {
+    background: #f7fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.state-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    border-color: #667eea;
+}
+
+.state-card.active {
+    border-color: #667eea;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    background: #e6eafc;
+}
+
+.state-card h3 {
+    font-size: 16px;
+    color: #4a5568;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.state-card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.section-title {
+    font-size: 22px;
+    color: #667eea;
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.print-all-btn {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    width: fit-content;
+    margin: 0 auto 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.print-all-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(56, 161, 105, 0.4);
+}
+
+.customer-list-bulk {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+}
+
+.customer-entry-bulk {
+    background: #f7fafc; /* Light background for each entry */
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on small screens */
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.customer-entry-bulk:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.customer-entry-bulk:last-child {
+    margin-bottom: 0;
+}
+
+.customer-entry-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 10px;
+}
+
+.customer-entry-header h4 {
+    font-size: 18px;
+    color: #2d3748;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.select-checkbox {
+    margin-right: 10px;
+    transform: scale(1.2);
+    accent-color: #667eea;
+}
+
+.product-name-tag, .entry-date-tag {
+    background: #e2e8f0;
+    color: #4a5568;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.entry-date-tag {
+    background: #d1e7ff;
+    color: #004085;
+}
+
+.customer-entry-body p {
+    font-size: 15px;
+    color: #4a5568;
+    white-space: pre-wrap;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.entry-actions-bulk {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    justify-content: flex-end; /* Align buttons to the right */
+}
+
+.action-btn-bulk {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.action-btn-bulk:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+}
+
+.copy-btn-bulk {
+    background: #ecc94b;
+}
+
+.copy-btn-bulk:hover {
+    background: #d69e2e;
+}
+
+.print-btn-bulk {
+    background: #9f7aea;
+}
+
+.print-btn-bulk:hover {
+    background: #805ad5;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #718096;
+    font-size: 18px;
+}
+
+.empty-state p {
+    font-size: 18px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .states-overview {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 10px;
+    }
+
+    .state-card {
+        padding: 10px;
+    }
+
+    .state-card h3 {
+        font-size: 14px;
+    }
+
+    .state-card p {
+        font-size: 24px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .print-all-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .customer-entry-bulk {
+        padding: 15px;
+    }
+
+    .customer-entry-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .customer-entry-header h4 {
+        font-size: 16px;
+    }
+
+    .customer-entry-body p {
+        font-size: 14px;
+    }
+
+    .select-checkbox {
+        transform: scale(1.2);
+    }
+
+    .product-name-tag, .entry-date-tag {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .entry-actions-bulk {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .action-btn-bulk {
+        flex: 1;
+        text-align: center;
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bulk-states-content {
+        padding: 15px;
+    }
+
+    .states-overview {
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+        gap: 8px;
+    }
+
+    .state-card {
+        padding: 8px;
+    }
+
+    .state-card h3 {
+        font-size: 12px;
+    }
+
+    .state-card p {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 18px;
+    }
+
+    .print-all-btn {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .customer-entry-bulk {
+        padding: 10px;
+    }
+
+    .customer-entry-bulk h4 {
+        font-size: 14px;
+    }
+
+    .customer-entry-bulk p {
+        font-size: 13px;
+    }
+
+    .select-checkbox {
+        transform: scale(1.0);
+    }
+
+    .product-name-tag, .entry-date-tag {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    .action-btn-bulk {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+

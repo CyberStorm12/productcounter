@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <link rel="stylesheet" href="product-detail.css">
+</head>
+<body>
+    <div class="search-section">
+        <input type="text" id="customerSearchInput" placeholder="Search customer entries..." class="search-input">
+        <div class="filter-icon" onclick="toggleStateFilter()">🔍</div>
+        <select id="stateFilter" class="state-filter">
+            <option value="">All States</option>
+        </select>
+    </div>
+
+    <div class="customer-entry-header">
+        <div class="entry-actions">
+            <button class="action-btn entry-number-btn">Entry #1</button>
+            <button class="action-btn edit-btn">Edit</button>
+            <button class="action-btn copy-btn">Copy</button>
+            <button class="action-btn entry-btn">Entry</button>
+            <button class="action-btn print-btn">Print</button>
+            <select class="action-btn state-dropdown">
+                <option>Pending</option>
+                <option>Processing</option>
+                <option>Ready</option>
+                <option>Delivered</option>
+            </select>
+        </div>
+    </div>
+
+    <script>
+        function toggleStateFilter() {
+            const stateFilter = document.getElementById("stateFilter");
+            stateFilter.classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>
+
